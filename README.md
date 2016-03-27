@@ -12,5 +12,5 @@ http://gdg-shinshu.connpass.com/event/28986/
 1. 初めに  
 2. CloudVision APIとTensorFlow  
 3. [アカウントの登録](FreeTraial.md)  
-4. 環境の構築  
+4. [環境の構築](DevEnvironment.md)
 5. Pythonを使って動かしてみる  
