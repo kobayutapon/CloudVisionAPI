@@ -34,8 +34,8 @@ pyenvというものを使うと開発環境を切り替えて使うことがで
 Anacondaを使った場合でも、いくつかのライブラリは自分でインストールしなければなりません。
 以下のコマンドでインストールしてください。
 
-pip install httplib2
-pip install --upgrade google-api-python-client
-pip install --force-reinstall uritemplate.py
+pip install httplib2  
+pip install --upgrade google-api-python-client  
+pip install --force-reinstall uritemplate.py  
 
 自分でPythonからインストールして環境構築している場合はさらに必要になる場合があります。
