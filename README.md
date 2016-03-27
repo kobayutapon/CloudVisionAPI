@@ -13,3 +13,4 @@ http://gdg-shinshu.connpass.com/event/28986/
 3. 環境の構築
 4. Tutorial1:アカウントの登録
 5. Pythonを使って動かしてみる
+
