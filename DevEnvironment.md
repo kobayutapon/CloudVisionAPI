@@ -21,6 +21,9 @@ Google Cloud APIは基本JSON形式でデータの受け渡しを行います。
 
 Anacondaのダウンロードは[こちら](https://www.continuum.io/downloads)から行えます。
 
+Anacondaを使うと、SpyderというIDEも一緒にインストールされます。  
+こちらも合わせて使うとよいでしょう。
+
 ## Python2 と 3どっちつかうの？
 なぜかPython2と3ではいろいろ互換性がありません。
 なぜそうなったかはは謎ですあが、3系と2系がどちらも混在して使われていたりします。  
