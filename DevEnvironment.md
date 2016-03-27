@@ -29,3 +29,13 @@ Anacondaを使うと、SpyderというIDEも一緒にインストールされま
 なぜそうなったかはは謎ですあが、3系と2系がどちらも混在して使われていたりします。  
 pyenvというものを使うと開発環境を切り替えて使うことができます。  
 今回のハンズオンはPythonの使い方がメインではないので説明しませんが、興味がある方は調べてみてください。  
+
+## 必要なPythonのライブラリ
+Anacondaを使った場合でも、いくつかのライブラリは自分でインストールしなければなりません。
+以下のコマンドでインストールしてください。
+
+pip install httplib2
+pip install --upgrade google-api-python-client
+pip install --force-reinstall uritemplate.py
+
+自分でPythonからインストールして環境構築している場合はさらに必要になる場合があります。
