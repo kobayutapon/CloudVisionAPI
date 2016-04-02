@@ -31,8 +31,8 @@ def make_image_data(image_filenames):
         
 
 if __name__ == '__main__':
-    api_key = 'API KEY'
-    image_file = 'Image File'
+    api_key = 'API_KEY'
+    image_file = 'Test Image'
     
     print api_key
     print image_file
