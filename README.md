@@ -9,8 +9,8 @@ http://gdg-shinshu.connpass.com/event/28986/
 
 
 ##内容
-1. 初めに  
-3. [アカウントの登録](FreeTraial.md)  
-4. [Quick Startの内容を試してみる](QuickStart.md)
-4. [Pythonの開発環境構築](DevEnvironment.md)
-5. Pythonを使って動かしてみる  
+1. [アカウントの登録](FreeTraial.md)  
+2. [Quick Startの内容を試してみる](QuickStart.md)
+3. [Pythonの開発環境構築](DevEnvironment.md)
+4. [Pythonを使って動かしてみる(APIキーの作成)](Tutorial1.md)  
+5. [Pythonを使って動かしてみる(Scriptの作成)](Tutorial2.md)  
