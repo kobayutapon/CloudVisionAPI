@@ -14,3 +14,5 @@ http://gdg-shinshu.connpass.com/event/28986/
 3. [Pythonの開発環境構築](DevEnvironment.md)
 4. [Pythonを使って動かしてみる(APIキーの作成)](Tutorial1.md)  
 5. [Pythonを使って動かしてみる(Scriptの作成)](Tutorial2.md)  
+6. [Pythonを使って動かしてみる(パラメータを変えてみる)](Tutorial3.md)
+ 
