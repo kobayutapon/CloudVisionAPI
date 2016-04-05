@@ -17,7 +17,7 @@
 ここでは簡単に何ができるかを示します。
 
 |設定値|説明|
-|:
+|:-----|----|
 |TYPE_UNSPECIFIED |	Unspecified feature type.|
 |FACE_DETECTION	| Run face detection.|
 |LANDMARK_DETECTION |	Run landmark detection.|
