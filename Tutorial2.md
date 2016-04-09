@@ -103,6 +103,40 @@ response = requests.post(ENDPOINT_URL,
 
 これでPythonからGoogle Cloud APIにアクセスすることができるようになりました。
 
+実際に動かすと、以下のようなJSON形式の応答が戻ります。
+
+```
+
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/03qtwd",
+          "description": "crowd",
+          "score": 0.90327162
+        },
+        {
+          "mid": "/m/0ltv",
+          "description": "auto racing",
+          "score": 0.50959766
+        }
+      ]
+    }
+  ]
+}
+
+```
+
+実際にPythonでjsonを扱う場合にはJSON形式のデータからPythonのデータ形式に変換する必要があります。
+
+
+参考URL：
+Python 2.7系列 http://docs.python.jp/2.7/library/json.html  
+Python 3系列 http://docs.python.jp/3/library/json.html  
+
+
+
 以下に今回作成したサンプルをすべて載せておきます。
 
 ```
