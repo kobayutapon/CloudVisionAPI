@@ -147,6 +147,21 @@ data = json.loads(response.text)
 
 ```
 
+実際には以下のようにそれぞれの要素が取得できます。  
+
+```
+features_list = data['responses']   # 呼び出すときのfeaturesに対応するリストを取得する
+
+for response in features_list:
+    # featureの確認
+    print "Features: LABEL_DETECTION \n"
+    type = response['labelAnnotations']     # ここのtypeはlistで取得される
+    for item in type:                       # itemはdict形式になっている
+        print item['score']
+        print item['mid']
+        print item['description']
+```
+
 参考URL：  
 Python 2.7系列 (http://docs.python.jp/2.7/library/json.html)  
 Python 3系列 (http://docs.python.jp/3/library/json.html)  
@@ -202,8 +217,20 @@ if __name__ == '__main__':
                              params={'key': api_key},
                              headers={'Content-Type': 'application/json'})
 
-    print response.status_code
-    print response.text
+                             if response.status_code != 200 :
+                                 print "Error: server Response NG" + response.status_code + "\n"
 
+    # Check replay data
+    data = json.loads( response.text )  # ここはdict形式
+    features_list = data['responses']   # 呼び出すときのfeaturesに対応するリストを取得する
+
+    for response in features_list:
+        # featureの確認
+        print "Features: LABEL_DETECTION \n"
+        type = response['labelAnnotations']     # ここのtypeはlistで取得される
+        for item in type:                       # itemはdict形式になっている
+            print item['score']
+            print item['mid']
+            print item['description']
 
 ```
