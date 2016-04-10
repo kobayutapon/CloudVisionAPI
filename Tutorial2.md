@@ -129,11 +129,27 @@ response = requests.post(ENDPOINT_URL,
 ```
 
 実際にPythonでjsonを扱う場合にはJSON形式のデータからPythonのデータ形式に変換する必要があります。
+```
+data = json.loads(response.text)
+```
+後は以下のようにキーの名前からデータを取得し、扱うことができます。先のJSON応答の場合、json.loadsを使うと以下のように変数が格納されていきます。
 
+```
+[ type : dict ] [Key : responses ]
+ |
+ |---list
+      |
+      |---- [ type : dict ] [ Key : labelAnnotations ]
+      |             |
+      |             |--- list
+      |                    |--- [ type : dict ] [ Key : score, mid, description ]
+      |                    |--- [ type : dict ] [ Key : score, mid, description ]
 
-参考URL：
-Python 2.7系列 http://docs.python.jp/2.7/library/json.html  
-Python 3系列 http://docs.python.jp/3/library/json.html  
+```
+
+参考URL：  
+Python 2.7系列 (http://docs.python.jp/2.7/library/json.html)  
+Python 3系列 (http://docs.python.jp/3/library/json.html)  
 
 
 
