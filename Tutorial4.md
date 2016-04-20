@@ -345,7 +345,7 @@ FACE_DETECTIONで戻ってくる応答ファイルの例を示します。
 * boundingPoly  
 検出した顔の境界情報が格納されます。2次元のポリゴンで指定され、後述するverticesで頂点の位置が指定されます。  
 
-* boundingPoly  
+* fdBoundingPoly  
 検出した顔の肌の部分の境界情報が格納されます。2次元のポリゴンで指定され、後述するverticesで頂点の位置が指定されます。  
 
 * vertices  

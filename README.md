@@ -16,3 +16,4 @@ http://gdg-shinshu.connpass.com/event/28986/
 5. [Pythonを使って動かしてみる(Scriptの作成)](Tutorial2.md)  
 6. [Pythonを使って動かしてみる(パラメータを変えてみる)](Tutorial3.md)
 7. [JSONの応答を見てみる(FACE_DETECTION)](Tutorial4.md)
+8. [JSONの応答を見てみる(LOGO_DETECTION/FACE_DETECTION)](Tutorial5.md)
