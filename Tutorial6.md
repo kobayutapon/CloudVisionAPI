@@ -398,3 +398,44 @@ TEXT_DETECTIONでは単純にOCRを行った文字列のほかに、構文解析
 　暴力っぽさ
 
 これらの度合いはLikelihoodで表されます。
+
+* UNKNOWN	判定不能。
+* VERY_UNLIKELY	非常に低いレベル。
+* UNLIKELY	低いレベル。
+* POSSIBLE	そうだと言うことができるレベル。
+* LIKELY	高いレベル。
+* VERY_LIKELY	非常に高いレベル。
+
+## IMAGE_PROPERTIES
+画像の色に関する情報を取得します。  
+![](./image/orange.jpg)  
+このようなオレンジ一色の画像を使うとこのような応答が戻ります。  
+
+```
+"dominantColors": {
+  "colors": [
+    {
+      "color": {
+        "red": 255,
+        "green": 127,
+        "blue": 38
+      },
+      "score": 1,
+      "pixelFraction": 1
+    }
+  ]
+
+  ```
+  * colors
+  　含まれる色の情報が入ります。
+
+  * score
+  　検出の信頼度を表します。0-1までの間で数字が入ります。
+
+  * pixelFraction
+  　ドットの大きさを表します。
+
+   * color
+  　色のRGB情報が入ります。それぞれred, green, blueにRGBの値が入ります。
+
+  
