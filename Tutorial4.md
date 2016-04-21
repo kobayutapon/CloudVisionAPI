@@ -1,5 +1,68 @@
 # 検出方法と応答の違い
 
+## LABEL_DETECTION
+画像の種類を検出します。
+このような画像を認識させると  
+![](./image/andromeda.jpg)  
+こんな応答が戻ってきます。
+
+```
+"labelAnnotations": [
+   {
+     "mid": "/m/01d9ll",
+     "description": "astronomical object",
+     "score": 0.94117647
+   },
+   {
+     "mid": "/m/039b5",
+     "description": "galaxy",
+     "score": 0.93211818
+   },
+   {
+     "mid": "/m/0jg24",
+     "description": "image",
+     "score": 0.89089781
+   },
+   {
+     "mid": "/m/06ngk",
+     "description": "star",
+     "score": 0.67042637
+   },
+   {
+     "mid": "/m/0dc_v",
+     "description": "astronomy",
+     "score": 0.65715992
+   },
+   {
+     "mid": "/m/07v7c",
+     "description": "universe",
+     "score": 0.5518617
+   },
+   {
+     "mid": "/m/01833w",
+     "description": "outer space",
+     "score": 0.51442331
+   },
+   {
+     "mid": "/m/05fny",
+     "description": "nebula",
+     "score": 0.51413369
+   }
+ ]
+```
+* mid
+ナレッジグラフ用のIDが入ります。ナレッジグラフに関してはこちらを参照してください。
+https://developers.google.com/knowledge-graph/#knowledge_graph_entities
+
+* description
+検出した種類（カテゴリ）が入ります。
+
+* score
+確からしさが入ります。0から1までの間の数字がはいり、1に近いほうが確からしいということになります。  
+
+この画像からは、star, universe, astronomy, outer space, nebula, galaxyとか入っているので、ほぼ正しく認識できているといえます。  
+さすがにアンドロメダとはわかりませんでした。（人間でも判別は難しいです。。。）
+
 ## FACE_DETECTION
 FACE_DETECTIONで戻ってくる応答ファイルの例を示します。
 
