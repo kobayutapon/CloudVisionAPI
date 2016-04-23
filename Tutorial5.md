@@ -57,6 +57,22 @@ https://developers.google.com/knowledge-graph/#knowledge_graph_entities
 * vertices  
 boundingPolyで検出したポリゴンの頂点の座標です。2次元座標で、x, yの要素で構成されます。  
 
+実際に扱う際のサンプルコードです。
+```
+if ("logoAnnotations" in response) == True:
+    print "------------------------------"
+    print "Features: LOGO_DETECTION \n"
+    type = response['logoAnnotations']     # ここのtypeはlistで取得される
+    for item in type:                       # itemはdict形式になっている
+        print item['score']
+        print item['mid']
+        print item['description']
+
+        boundingPoly = item['boundingPoly']                
+        for position in boundingPoly:
+            print "(x,y)=" + str(position['x']) + "," + str(position['y'])
+```
+
 ## LANDMARK_DETECTION
 LANDMARK_DETECTIONは画像から位置情報などを取得するものです。  
 例えばこのような画像（たしかベイブリッジだったはず）を行うと、次のような応答が戻ってきます。  
@@ -121,3 +137,22 @@ boundingPolyで検出したポリゴンの頂点の座標です。2次元座標�
 * locations
  位置情報が入ります。緯度、経度がそれぞれlatitutude, longitudeに入ります。入る値はそれぞれ-90°～90°,-180°～180°となります。  
  位置情報はWGS84 Standardに準拠します。
+
+```
+if ("landmarkAnnotations" in response) == True:
+    print "------------------------------"
+    print "Features: LANDMARK_DETECTION \n"
+    type = response['landmarkAnnotations']     # ここのtypeはlistで取得される
+    for item in type:                       # itemはdict形式になっている
+        print item['score']
+        print item['mid']
+        print item['description']
+
+        boundingPoly = item['boundingPoly']['vertices']               
+        for position in boundingPoly:
+            print "(x,y)=" + str(position['x']) + "," + str(position['y'])
+
+        loc =  item['locations']
+        for pos in loc:
+            print "(Latitude. Longitude)=(" + str( pos['latLng']['latitude']) + "," + str(pos['latLng']['longitude']) + ")"
+```
