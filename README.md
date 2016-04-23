@@ -17,3 +17,4 @@ http://gdg-shinshu.connpass.com/event/28986/
 6. [Pythonを使って動かしてみる(パラメータを変えてみる)](Tutorial3.md)
 7. [JSONの応答を見てみる(FACE_DETECTION)](Tutorial4.md)
 8. [JSONの応答を見てみる(LOGO_DETECTION/FACE_DETECTION)](Tutorial5.md)
+9. [参考情報](resource.md)
