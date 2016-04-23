@@ -373,6 +373,24 @@ boundingPolyで検出したポリゴンの頂点の座標です。2次元座標�
 TEXT_DETECTIONでは単純にOCRを行った文字列のほかに、構文解析をしてくれるようです。
 これは便利。（ない場合は別にMecabとかで解析する必要があるので、一発でできると楽ですね）
 
+以下にコード例を示します。  
+```
+# TEXT_DETECTION
+if ("textAnnotations" in response) == True:
+    print "------------------------------"
+    print "Features: TEXT_DETECTION \n"
+    type = response['textAnnotations']     # ここのtypeはlistで取得される
+    for item in type:                       # itemはdict形式になっている
+        if ("locale" in item) == True:
+            print "Locale" + item['locale']
+
+        print "Description" + item['description']
+
+        boundingPoly = item['boundingPoly']['vertices']               
+        for position in boundingPoly:
+            print "(x,y)=" + str(position['x']) + "," + str(position['y'])
+```
+
 ## SAFE_SEARCH_DETECTION
 18禁な画像かどうかを判定してくれます。
 このような応答が戻ってきます。
@@ -406,6 +424,19 @@ TEXT_DETECTIONでは単純にOCRを行った文字列のほかに、構文解析
 * LIKELY	高いレベル。
 * VERY_LIKELY	非常に高いレベル。
 
+コード例を以下に示します。  
+```
+# SAFE_SEARCH_DETECTION
+if ("safeSearchAnnotation" in response) == True:
+    print "------------------------------"
+    print "Features: SAFE_SEARCH_DETECTION \n"
+    type = response['safeSearchAnnotation']
+    print "adult:" + type['adult']
+    print "spoof:" + type['spoof']
+    print "medical:" + type['medical']
+    print "violence:" + type['violence']
+```
+
 ## IMAGE_PROPERTIES
 画像の色に関する情報を取得します。  
 ![](./image/orange.jpg)  
@@ -438,4 +469,15 @@ TEXT_DETECTIONでは単純にOCRを行った文字列のほかに、構文解析
    * color
   　色のRGB情報が入ります。それぞれred, green, blueにRGBの値が入ります。
 
-  
+コード例を以下に示します。  
+```
+# IMAGE_PROPERTIES
+if ("imagePropertiesAnnotation" in response) == True:
+    print "------------------------------"
+    print "Features: IMAGE_PROPERTIES \n"
+    type = response['imagePropertiesAnnotation']
+    for color in type['dominantColors']['colors']:
+        print "(R,G,B)=(" + str(color['color']['red']) + "," + str(color['color']['green'])+ "," + str(color['color']['blue']) + ")"
+        print "score : " + str( color['score'] )
+        print "pixelFraction : " + str( color['pixelFraction'] )
+```
