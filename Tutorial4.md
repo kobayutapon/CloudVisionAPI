@@ -63,6 +63,19 @@ https://developers.google.com/knowledge-graph/#knowledge_graph_entities
 この画像からは、star, universe, astronomy, outer space, nebula, galaxyとか入っているので、ほぼ正しく認識できているといえます。  
 さすがにアンドロメダとはわかりませんでした。（人間でも判別は難しいです。。。）
 
+コード例を以下に示します。  
+```
+# LABEL_DETECTION
+if ("labelAnnotations" in response) == True:
+    print "------------------------------"
+    print "Features: LABEL_DETECTION \n"
+    type = response['labelAnnotations']     # ここのtypeはlistで取得される
+    for item in type:                       # itemはdict形式になっている
+        print item['score']
+        print item['mid']
+        print item['description']
+```
+
 ## FACE_DETECTION
 FACE_DETECTIONで戻ってくる応答ファイルの例を示します。
 
