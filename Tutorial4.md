@@ -3,7 +3,7 @@
 ## LABEL_DETECTION
 画像の種類を検出します。
 このような画像を認識させると  
-![](./image/andromeda.jpg)  
+![](./image/andromeda.JPG)  
 こんな応答が戻ってきます。
 
 ```
